@@ -1,0 +1,115 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+%----------------------------------------------------------------------------------------
+% Contact Information
+%----------------------------------------------------------------------------------------
+
+\name{Ibragim Zubailov} % Your name
+\address{+385 (68) 458-679 \\
+    Bar, Montenegro \\
+    \href{mailto:vulgarnykarlson@gmail.com}{vulgarnykarlson@gmail.com} \\
+    \href{https://t.me/vulgarnykarlson}{telegram: vulgarnykarlson}
+}
+\address{
+    \href{https://linkedin.com/in/vulgarnykarlson}{linkedin.com/in/vulgarnykarlson} \\
+    \href{https://github.com/vulgarnykarlson}{github.com/vulgarnykarlson} \\
+    \href{https://gitlab.karlson.dev/individual}{gitlab.karlson.dev/individual}
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% Skills
+%----------------------------------------------------------------------------------------
+\begin{rSection}{\textbf{Skills}}
+
+       Golang, Typescript, NodeJS, NestJS, REST, WebSockets, GRPC, GraphQL, Web3(Blockchains:Bitcoin,Ethereum)
+       \\ MySQL, Postgres, Clickhouse, Redis, Aerospike, Kafka, RabbitMQ, NATS
+       \\ GlusterFS, ElasticSearch, Ansible, Nginx, Prometheus, Grafana
+\end{rSection}
+%----------------------------------------------------------------------------------------
+% Professional Summary
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\textbf{Professional Summary}}
+{ I am a Software engineer and leader with a 7 years of experience, with strong fundamentals in NodeJS, Golang, Architecture and Database
+knowledge. History of my work is covered industries as Adtech (OpenRTB), Storage and Web3 systems.
+\\ My expertise in handling high-load systems has provided me with the knowledge to craft optimal application architecture, conduct A/B testing, and transition from monolithic to microservice systems, catering to both business requirements and overall team efficiency.
+\\ I've consistently analyzed every aspect of third-party technology implementation, risk assessment, transition phases, and understanding the benefits derived from their usage.
+}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Work Experience
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{\textbf{Work Experience} (6.5 years) }
+
+\textbf{MTS Group} \hfill \textit{Moscow, Russia} \\
+\textbf{Senior Golang and NodeJS Developer}  \hfill Jun 2022 --- Jun 2023
+\begin{itemize}
+    \setlength\itemsep{-0.3em}
+    \item Develop high-load b2b storage. stack: Golang, NodeJS, Kafka, Clickhouse, RabbitMQ
+    \item Service for optimizing load-balance of storage throughput. stack: golang, glusterfs
+    \item Optimized retrieve data from storage. stack: golang, clickhouse
+\end{itemize}
+
+\textbf{Lofty} \hfill \textit{Moscow, Russia} \\
+\textbf{Teamlead (8 backend)} \hfill May 2020 --- May 2022
+\begin{itemize}
+    \setlength\itemsep{-0.3em}
+    \item Developed arbitrage project between advertisers(DSP) and supply platforms (SSP). Actively participated in strategizing
+    	   business logic development. After 2 years project was generating over 1mil\$ revenue, and having ~500k rps.
+	    \\ stack: Golang, Aerospike, Kafka, Clickhouse, Postgres, GRPC.
+    \item Processes added to the team:KPI performance review, roadmap planning, mentoring, idea submission point, task decoupling.
+    \item Developed traffic quality evaluation system to predict prices for SSP
+    \item Developed filter system to screen out fraudulent and low-quality traffic.
+\end{itemize}
+
+\textbf{Techlead (4 backend)} \hfill Oct 2019 --- May 2020
+\begin{itemize}
+    \setlength\itemsep{-0.3em}
+    \item Rewrited main application to achieve: stability(no fires), 3x perfomance, A/B Bussiness testing, unit/integration tests, low
+    	    entry threshold(for newcomers). In 2y growed from 15k to 150k rps.. stack: NodeJS,Clickhouse,Postgres,Redis,Kafka.
+    \item Introduced Agile pipeline
+    \item Actively involved in the recruitment process
+    \item Participated in architecture design including devop's and database storage parts.
+\end{itemize}
+
+\textbf{Senior NodeJS Developer} \hfill Jul 2019 --- Oct 2019
+\begin{itemize}
+    \setlength\itemsep{-0.3em}
+    \item Develop high-load (70k rps) push advertisement sender, with a big flexibility of settings. stack: NodeJS, MySQL, RabbitMQ
+    \item Micro-service for authorization
+\end{itemize}
+
+\textbf{Belsona Investment Group} \hfill \textit{Moscow, Russia} \\
+\textbf{Middle NodeJS Developer}  \hfill Jun 2017 --- Jul 2019
+\begin{itemize}
+    \setlength\itemsep{-0.3em}
+    \item Develop arbitrage bot between blockchain smart-contract and exchange (Binance/Bitfinex).
+    	 \\ stack: NodeJS,MySQL,Typescript, Web3(Ethereum), Websockets.
+    \item Design and develop risk evaluation system and a predictive model based on market trends,trading data,blockchain activities.
+    \item Automation scripts for reducing routine tasks, specifically for ICO projects
+    \item Devised service for risk score ICO products.
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Education Section (Shift below Projects if your projects are substantial)
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+\textbf{Bachelor's degree, Computer and Sep 2013 - May 2017 Information Systems Security} \hfill {Sep 2013 --- May 2017} \\
+	  Dagestan State University
+
+\end{rSection}
+
+\end{document}
