@@ -1,6 +1,7 @@
 \documentclass{resume} % Use the custom resume.cls style
-
-\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage[left=0.3 in,top=0.2in,right=0.3 in,bottom=0.2in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
@@ -8,28 +9,29 @@
 % Contact Information
 %----------------------------------------------------------------------------------------
 
-\name{Ibragim Zubailov} % Your name
-\address{+385 (68) 458-679 \\
-    Bar, Montenegro \\
-    \href{mailto:vulgarnykarlson@gmail.com}{vulgarnykarlson@gmail.com} \\
-    \href{https://t.me/vulgarnykarlson}{telegram: vulgarnykarlson}
-}
-\address{
-    \href{https://linkedin.com/in/vulgarnykarlson}{linkedin.com/in/vulgarnykarlson} \\
-    \href{https://github.com/vulgarnykarlson}{github.com/vulgarnykarlson} \\
-    \href{https://gitlab.karlson.dev/individual}{gitlab.karlson.dev/individual}
-}
 
+\name{Ibragim Zubailov} % Your name
+\address{
+    \href{tel:38568458679}{\faMobile\hspace{2pt}+385 68 458679} \\
+    \href{https://t.me/vulgarnykarlson}{\faPaperPlane\hspace{2pt}Telegram} \\
+    \href{mailto:vulgarnykarlson@gmail.com}{\faAt\hspace{2pt}vulgarnykarlson@gmail.com} \\
+    \href{https://linkedin.com/in/vulgarnykarlson}{\faLinkedinSquare\hspace{2pt}LinkedIn} \\
+    \href{https://github.com/vulgarnykarlson}{\faGithub\hspace{2pt}Github} \\
+    \href{https://gitlab.karlson.dev/individual}{\faGlobe \hspace{2pt}Portfolio} \\
+    \href{https://maps.app.goo.gl/YJh4mzRDZnpb5uRo9}{\faMapMarker\hspace{2pt}Bar, Montenegro}
+}
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 % Skills
 %----------------------------------------------------------------------------------------
 \begin{rSection}{\textbf{Skills}}
-
-       Golang, Typescript, NodeJS, NestJS, REST, WebSockets, GRPC, GraphQL, Web3(Blockchains:Bitcoin,Ethereum)
-       \\ MySQL, Postgres, Clickhouse, Redis, Aerospike, Kafka, RabbitMQ, NATS
-       \\ GlusterFS, ElasticSearch, Ansible, Nginx, Prometheus, Grafana
+       \textbf{Programming}: Golang, Typescript, NodeJS, PHP, NestJS, Web3(Blockchain)
+       \\ \textbf{Storage}: MySQL, Postgres, Clickhouse, Redis, Aerospike
+       \\ \textbf{Message brokers}: Kafka, RabbitMQ, NATS
+       \\ \textbf{Transports}: REST, WebSockets, GRPC, GraphQL
+       \\ \textbf{Others}: GlusterFS, ElasticSearch, Docker, Kubernetes, Ansible, Nginx, Prometheus, Grafana
+       \\ \textbf{Languages}: Russian (native), English (intermediate)
 \end{rSection}
 %----------------------------------------------------------------------------------------
 % Professional Summary
@@ -37,9 +39,9 @@
 
 \begin{rSection}{\textbf{Professional Summary}}
 { I am a Software engineer and leader with a 7 years of experience, with strong fundamentals in NodeJS, Golang, Architecture and Database
-knowledge. History of my work is covered industries as Adtech (OpenRTB), Storage and Web3 systems.
+knowledge.
 \\ My expertise in handling high-load systems has provided me with the knowledge to craft optimal application architecture, conduct A/B testing, and transition from monolithic to microservice systems, catering to both business requirements and overall team efficiency.
-\\ I've consistently analyzed every aspect of third-party technology implementation, risk assessment, transition phases, and understanding the benefits derived from their usage.
+\\ I've consistently analyzed every aspect of third-party technology implementation, risk assessment, transition phases, and understanding the pros/cons derived from their usage.
 }
 
 \end{rSection}
@@ -64,7 +66,8 @@ knowledge. History of my work is covered industries as Adtech (OpenRTB), Storage
 \begin{itemize}
     \setlength\itemsep{-0.3em}
     \item Developed arbitrage project between advertisers(DSP) and supply platforms (SSP). Actively participated in strategizing
-    	   business logic development. After 2 years project was generating over 1mil\$ revenue, and having ~500k rps.
+    	   business logic development.
+    	   After 2 years project was generating over 1mil\$ revenue, and having ~500k rps.
 	    \\ stack: Golang, Aerospike, Kafka, Clickhouse, Postgres, GRPC.
     \item Processes added to the team:KPI performance review, roadmap planning, mentoring, idea submission point, task decoupling.
     \item Developed traffic quality evaluation system to predict prices for SSP
@@ -74,10 +77,10 @@ knowledge. History of my work is covered industries as Adtech (OpenRTB), Storage
 \textbf{Techlead (4 backend)} \hfill Oct 2019 --- May 2020
 \begin{itemize}
     \setlength\itemsep{-0.3em}
-    \item Rewrited main application to achieve: stability(no fires), 3x perfomance, A/B Bussiness testing, unit/integration tests, low
-    	    entry threshold(for newcomers). In 2y growed from 15k to 150k rps.. stack: NodeJS,Clickhouse,Postgres,Redis,Kafka.
-    \item Introduced Agile pipeline
-    \item Actively involved in the recruitment process
+    \item Rewrote main application to achieve: stability(no fires), 3x perfomance, A/B Bussiness testing, unit/integration tests, low
+    	    entry threshold(for newcomers).
+    	    In 2y growed from 15k to 150k rps.. stack: NodeJS,Clickhouse,Postgres,Redis,Kafka.
+    \item Introduced Agile pipeline, involved in the recruitment process
     \item Participated in architecture design including devop's and database storage parts.
 \end{itemize}
 
@@ -102,7 +105,7 @@ knowledge. History of my work is covered industries as Adtech (OpenRTB), Storage
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-% Education Section (Shift below Projects if your projects are substantial)
+% Education Section
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
