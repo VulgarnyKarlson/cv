@@ -20,11 +20,17 @@
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[10pt,letterpaper]{article} % Font size and paper type
+\LoadClass[a4paper]{article} % Font size and paper type
+\RequirePackage{fontawesome}
+\RequirePackage[parfill]{parskip} % Remove paragraph indentation
+\RequirePackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\RequirePackage{ifthen} % Required for ifthenelse statements
+\RequirePackage[top=0.5cm,left=1cm,right=1cm,bottom=1.2cm]{geometry} % Document margins
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[russian]{babel}
 
-\usepackage[parfill]{parskip} % Remove paragraph indentation
-\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{ifthen} % Required for ifthenelse statements
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -87,7 +93,7 @@
 \let\ori@document=\document
 \renewcommand{\document}{
     \ori@document  % Begin document
-    \hspace{220pt}\printname % Print the name specified with \name
+    \hspace{200pt}\printname % Print the name specified with \name
     \@ifundefined{@addressone}{}{ % Print the first address if specified
         \printaddress{\@addressone}}
     \@ifundefined{@addresstwo}{}{ % Print the second address if specified
