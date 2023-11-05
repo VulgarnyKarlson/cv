@@ -1,17 +1,10 @@
 \documentclass{resume}
 
-%----------------------------------------------------------------------------------------
-% Contact Information
-%----------------------------------------------------------------------------------------
-
-
 \name{Ибрагим Зубаилов} % Your name
 \address{
-    \hspace{14pt} % margin left
-    \href{tel:38568458679}{\faMobile\hspace{3pt}+385 68 458679} \\
-    \href{https://t.me/vulgarnykarlson}{\faPaperPlane\hspace{3pt}Telegram} \\
     \href{mailto:karlson.zim@gmail.com}{\faAt\hspace{3pt}karlson.zim@gmail.com} \\
     \href{https://linkedin.com/in/karlsondev}{\faLinkedinSquare\hspace{3pt}LinkedIn} \\
+    \href{https://t.me/vulgarnykarlson}{\faPaperPlane\hspace{3pt}Telegram} \\
     \href{https://github.com/vulgarnykarlson}{\faGithub\hspace{3pt}Github} \\
     \href{https://gitlab.karlson.dev/individual}{\faGlobe \hspace{3pt}Portfolio} \\
     \href{https://maps.app.goo.gl/YJh4mzRDZnpb5uRo9}{\faMapMarker\hspace{3pt}Черногория}
@@ -22,10 +15,11 @@
 % Skills
 %----------------------------------------------------------------------------------------
 \begin{rSection}{\textbf{Скиллы}}
-    \textbf{Программирование}: Go, TypeScript, Node.js, NestJS, Web3(Blockchain), PHP
-    \\ \textbf{Хранение\&Транспорт}: Clickhouse, Postgres, MySQL, MongoDB, Redis, Aerospike, Kafka, RabbitMQ, NATS
-    \\ \textbf{Другие}: GlusterFS, ElasticSearch, Docker, Kubernetes, Ansible, Nginx, Prometheus, Grafana
-    \\ \textbf{Языки}: Россияn (native), English (intermediate)
+    \textbf{Programming}: Go ({\textbf{3г.}}), TypeScript ({\textbf{5г.}}), Node.js ({\textbf{6г.}}), NestJS ({\textbf{5г.}}), Web3(Blockchain), PHP
+    \\ \textbf{Storage}: Clickhouse ({\textbf{4г.}}), Postgres ({\textbf{3г.}}), MySQL ({\textbf{2г.}}), MongoDB ({\textbf{1г.}}), Redis, Aerospike
+    \\ \textbf{Transport}: Kafka, RabbitMQ, NATS, GRPC, GraphQL, Websockets
+    \\ \textbf{Others}: GlusterFS, ElasticSearch, Docker, Kubernetes, Ansible, Nginx, Prometheus, Grafana
+    \\ \textbf{Languages}: Russian ({\textbf{native}}), English ({\textbf{intermediate}})
 \end{rSection}
 %----------------------------------------------------------------------------------------
 % Professional Summary
@@ -33,70 +27,59 @@
 
 \begin{rSection}{\textbf{Обо мне}}
 {
-    Я программист с опытом в Node.js, Go, Teamlead, Techlead и дизайну приложений
-\\ Специализируюсь на высоконагруженных системах, A/B тестировании, переходе на микросервисы и оценке рисков сторонних технологий
+    Я программист с опытом в Node.js, Go, Базы данных, Teamlead, Techlead
 }
 
 \end{rSection}
-
 %----------------------------------------------------------------------------------------
 % Work Experience
 %----------------------------------------------------------------------------------------
 \begin{rSection}{\textbf{Опыт работы} (6 лет) }
     \textbf{МТС} \hfill \textit{Москва, Россия} \\
-    \textbf{Senior Go and Node.js Developer}  \hfill Июнь 2022 --- Июнь 2023 (1г.)
+    \textbf{Senior Go and Node.js Developer}  \hfill Июнь 2022 --- Июнь 2023 ({\textbf{1г.}})
     \begin{itemize}
-        \setlength\itemsep{-0.4em}
-        \item Разработка высоконагруженного b2b хранилища.
-        \item Сервис для оптимизации баланса нагрузки хранилища.
-        \item Оптимизация получения данных из хранилища.
+        \item Установил проблему баланса между хранилищами, и разработал сервис для оптимизации  нагрузки.
+        \item Устранил узкое горлышко при получении данных из хранилища.
+        \item Облегчил работу команды, создав инструменты для упрощения работы.
     \end{itemize}
-    \\\textbf{Стек: Go, Node.js, Clickhouse, MongoDB, Kafka, RabbitMQ, GlusterFS}
+    % - \\\textbf{Стек: Go, Node.js, Clickhouse, MongoDB, Kafka, RabbitMQ, GlusterFS}
 
     \textbf{Lofty}\hfill \textit{Москва, Россия} \\
-    \textbf{Teamlead} (8 Бэкэнд) \hfill Май 2020 --- Май 2022 (2г.)
+    \textbf{Teamlead} (8 Бэкэнд) \hfill Май 2020 --- Май 2022 ({\textbf{2г.}})
     \begin{itemize}
-        \setlength\itemsep{-0.4em}
-        \item Разработал проект арбитража между рекламодателями(DSP) и площадками(SSP). Активно участвовал в стратегическом
-        планировании разработки бизнес-логики.
-        Через 2 года проект генерировал более 1 млн \$ выручки и имел ~500 тыс.
-        rps.
-        \item Внедрил в команду процессы: KPI performance review, планирование дорожной карты, менторство, подача идей, декомпозиция задач.
-        \item Разработал систему оценки качества трафика для прогнозирования цен на SSP
-        \item Разработал систему фильтрации для отсеивания мошеннического и низкокачественного трафика.
+        \item Анализировал данные, идентифицируя ключевые точки роста для рекламного арбитража.(\textbf{OpenRTB})\@.
+        \item Оптимизировал процессы в команде: включил \textbf{KPI}, дорожную карту, стол идей, декомпозиция задач\@.
+        \item Продумал систему прогнозирования качества трафика, оптимизируя стоимость и фильтрацию при работе с \textbf{SSP}\@.
+        \item Сформировал идею и разработал систему оценки и фильтрации (\textbf{Antifraud}), гарантируя качество для \textbf{DSP}\@.
+        \item Увеличил годовую прибыль проекта до \textbf{1 млн\$} в течение 2 лет, обеспечив работу под \textbf{нагрузкой в 500к} rps\@.
     \end{itemize}
-    \\\textbf{Стек: Go, Clickhouse, Postgres, Aerospike, Kafka, GRPC}
+    % - \\\textbf{Стек: Go, Clickhouse, Postgres, Aerospike, Kafka, GRPC}
 
-    \textbf{Techlead} (4 Бэкэнд) \hfill Окт 2019 --- Май 2020 (8м.)
+    \textbf{Techlead} (4 Бэкэнд) \hfill Окт 2019 --- Май 2020 ({\textbf{8м.}})
     \begin{itemize}
-        \setlength\itemsep{-0.4em}
-        \item Переписал основное приложение для достижения: стабильности(без пожаров), 3х производительности, A/B бизнес-тестирования, unit/integration тестов, низкого порога входа(для новичков).
-        За 2 года вырос с 15к до 150к rps.
-        \item Внедрил Agile pipeline, участвовал в процессе найма
-        \item Участвовал в архитектурном дизайне, включая devop's и части хранения данных.
+        \item Переделал приложение достигнув стабильности, \textbf{3х} производительности и возможности A/B-тестирования\@.
+        \item Выросла производительность системы \textbf{с 15к до 150к RPS} за 2 года\@.
+        \item Внедрил Agile, оптимизировал процессы найма и адаптации персонала\@.
+        \item Принимал участие в архитектурном проектировании и DevOps, повысил эффективность хранения данных\@.
     \end{itemize}
-    \\\textbf{Стек: Node.js, Clickhouse, Postgres, Redis, Kafka}
+    % - \\\textbf{Стек: Node.js, Clickhouse, Postgres, Redis, Kafka}
 
-    \textbf{Senior Node.js Developer} \hfill Июль 2019 --- Окт 2019 (4м.)
+    \textbf{Senior Node.js Developer} \hfill Июль 2019 --- Окт 2019 ({\textbf{4м.}})
     \begin{itemize}
-        \setlength\itemsep{-0.4em}
-        \item Разработал высоконагруженный (70k rps) сервис для отправки push-уведомлений с большой гибкостью настроек.
-        \item Микросервис для авторизации
+        \item Разработал высоконагруженный (\textbf{70k} rps) сервис для отправки push-уведомлений с большой гибкостью настроек\@.
+        \item Создал микросервис для авторизации\@.
     \end{itemize}
-    \\\textbf{Стек: Node.js, MySQL, RabbitMQ}
+    % - \\\textbf{Стек: Node.js, MySQL, RabbitMQ}
 
     \textbf{Belsona Investment Group} \hfill \textit{Москва, Россия} \\
-    \textbf{Middle Node.js Developer}  \hfill Июнь 2017 --- Июль 2019 (2г.)
-
+    \textbf{Node.js Developer}  \hfill Июнь 2017 --- Июль 2019 ({\textbf{2г.}})
     \begin{itemize}
-        \setlength\itemsep{-0.4em}
-        \item Разработал арбитражный бот между блокчейн смарт-контрактом и биржей (Binance/Bitfinex).
-        \item Спроектировал и разработал систему оценку рисков и
-        \item Дизайн и разработка системы оценки рисков и прогностической модели на основе рыночных трендов, торговых данных и активности блокчейна.
-        \item Автоматизированные скрипты для сокращения рутинных задач, в частности для проектов ICO\@.
-        \item Разработал сервис для оценки рисков ICO проектов.
+        \item Разработал бота для арбитража между \textbf{блокчейн-смарт-контрактами} и биржами (\textbf{Binance/Bitfinex})\@.
+        \item Создал систему оценки рисков и прогностическую модель, основанную на трендах рынка и данных блокчейна\@.
+        \item Реализовал автоматизированные скрипты для сокращения рутинных задач, в частности, для проектов ICO\@.
+        \item Разработал сервис для расчета рисков ICO-продуктов\@.
     \end{itemize}
-    \\\textbf{Стек: Node.js, TypeScript, MySQL, Web3(Ethereum), Websockets}
+    % - \\\textbf{Стек: Node.js, TypeScript, MySQL, Web3(Ethereum), Websockets}
 
 \end{rSection}
 %----------------------------------------------------------------------------------------
@@ -112,7 +95,7 @@
 
 \begin{rSection}{\textbf{Education}}
 
-    \textbf{Бакалавр, Информационная безопасность } \hfill {Сен 2013 --- Май 2017(4г.)} \\
+    \textbf{Бакалавр, Информационная безопасность } \hfill {Сен 2013 --- Май 2017({\textbf{4г.}})} \\
     Дагестанский Государственный Университет
 
 \end{rSection}

@@ -1,4 +1,0 @@
--- Выявить узкие места резюме </br>
--- Что может вызвать редфлаг </br>
--- Что может вызвать вопросы </br>
--- https://github.com/abhisheknaiidu/awesome-github-profile-readme

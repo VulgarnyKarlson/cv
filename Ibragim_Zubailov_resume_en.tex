@@ -1,5 +1,4 @@
-\documentclass[a4paper]{resume} % Use the custom resume.cls style
-
+\documentclass{resume}
 %----------------------------------------------------------------------------------------
 % Contact Information
 %----------------------------------------------------------------------------------------
@@ -7,25 +6,24 @@
 
 \name{Ibragim Zubailov} % Your name
 \address{
-    \hspace{15pt} % margin left
-    \href{tel:38568458679}{\faMobile\hspace{3pt}+385 68 458679} \\
-    \href{https://t.me/vulgarnykarlson}{\faPaperPlane\hspace{3pt}Telegram} \\
     \href{mailto:karlson.zim@gmail.com}{\faAt\hspace{3pt}karlson.zim@gmail.com} \\
     \href{https://linkedin.com/in/karlsondev}{\faLinkedinSquare\hspace{3pt}LinkedIn} \\
+    \href{https://t.me/vulgarnykarlson}{\faPaperPlane\hspace{3pt}Telegram} \\
     \href{https://github.com/vulgarnykarlson}{\faGithub\hspace{3pt}Github} \\
     \href{https://gitlab.karlson.dev/individual}{\faGlobe \hspace{3pt}Portfolio} \\
     \href{https://maps.app.goo.gl/YJh4mzRDZnpb5uRo9}{\faMapMarker\hspace{3pt}Montenegro}
 }
 \begin{document}
-
+% - Обратите внимание на подсказки, какие именно вы заметили, закрывают ли они ваши вопросы?
 %----------------------------------------------------------------------------------------
 % Skills
 %----------------------------------------------------------------------------------------
 \begin{rSection}{\textbf{Skills}}
-       \textbf{Programming}: Go, TypeScript, Node.js, NestJS, Web3(Blockchain), PHP
-       \\ \textbf{Storage\&Transport}: Clickhouse, Postgres, MySQL, MongoDB, Redis, Aerospike, Kafka, RabbitMQ, NATS
+       \textbf{Programming}: Go ({\textbf{3y}}), TypeScript ({\textbf{5y}}), Node.js ({\textbf{6y}}), NestJS ({\textbf{5y}}), Web3(Blockchain), PHP
+       \\ \textbf{Storage}: Clickhouse ({\textbf{4y}}), Postgres ({\textbf{3y}}), MySQL ({\textbf{2y}}), MongoDB ({\textbf{1y}}), Redis, Aerospike
+       \\ \textbf{Transport}: Kafka, RabbitMQ, NATS, GRPC, GraphQL, Websockets
        \\ \textbf{Others}: GlusterFS, ElasticSearch, Docker, Kubernetes, Ansible, Nginx, Prometheus, Grafana
-       \\ \textbf{Languages}: Russian (native), English (intermediate)
+       \\ \textbf{Languages}: Russian ({\textbf{native}}), English ({\textbf{intermediate}})
 \end{rSection}
 %----------------------------------------------------------------------------------------
 % Professional Summary
@@ -33,8 +31,7 @@
 
 \begin{rSection}{\textbf{Professional Summary}}
 {
-    I'm a Software Engineer with experience in Node.js, Go, Teamlead, Techlead and Application design
-    \\ I specialize in high-load systems, A/B testing, transitioning to microservices, and evaluating third-party tech risks
+    I'm a Software Engineer with experience in Node.js, Go, Databases, Teamlead, Techlead
 }
 
 \end{rSection}
@@ -45,58 +42,52 @@
 \begin{rSection}{\textbf{Work Experience} (6 years) }
 
 \textbf{MTS Group} \hfill \textit{Moscow, Russia} \\
-\textbf{Senior Go and Node.js Developer}  \hfill Jun 2022 --- Jun 2023 (1y.)
+\textbf{Senior Go and Node.js Developer}  \hfill Jun 2022 --- Jun 2023 ({\textbf{1y.}})
 \begin{itemize}
     \setlength\itemsep{-0.4em}
-    \item Develop high-load b2b storage.
-    \item Service for optimizing load-balance of storage throughput.
-    \item Optimized retrieve data from storage.
+    \item Identified a balance issue between storage systems and developed a service to optimize load handling\@.
+    \item Eliminated a bottleneck in data retrieval from storage\@.
+    \item Facilitated team operations by creating tools for workflow simplification, which enhanced overall team productivity\@.
 \end{itemize}
-\\\textbf{Stack: Go, Node.js, Clickhouse, MongoDB, Kafka, RabbitMQ, GlusterFS}
+%- \\\textbf{Stack: Go, Node.js, Clickhouse, MongoDB, Kafka, RabbitMQ, GlusterFS}
 
 \textbf{Lofty}\hfill \textit{Moscow, Russia} \\
-\textbf{Teamlead} (8 BACKEND) \hfill May 2020 --- May 2022 (2y.)
+\textbf{Teamlead} (8 BACKEND) \hfill May 2020 --- May 2022 ({\textbf{2y.}})
 \begin{itemize}
-    \setlength\itemsep{-0.4em}
-    \item Developed arbitrage project between advertisers(DSP) and supply platforms (SSP). Actively participated in strategizing
-    	   business logic development.
-    	   After 2 years project was generating over 1mil\$ revenue, and having ~500k rps.
-    \item Processes added to the team:KPI performance review, roadmap planning, mentoring, idea submission point, task decoupling.
-    \item Developed traffic quality evaluation system to predict prices for SSP
-    \item Developed filter system to screen out fraudulent and low-quality traffic.
+    \item Analyzed data to pinpoint key growth areas for advertising arbitrage (\textbf{OpenRTB})\@.
+    \item Streamlined team processes: incorporated \textbf{KPIs}, a roadmap, an idea board, task decomposition\@.
+    \item Devised a traffic quality forecasting system to optimize costs and filtering for \textbf{SSP}\@.
+    \item Conceived and developed a system for assessment and filtration (\textbf{Antifraud}), ensuring quality for \textbf{DSP}\@.
+    \item Boosted the annual profit of a project to \textbf{1 million USD} within two years, maintaining operations under \textbf{500k} rps\@.
 \end{itemize}
-\\\textbf{Stack: Go, Clickhouse, Postgres, Aerospike, Kafka, GRPC}
+%- \\\textbf{Stack: Go, Clickhouse, Postgres, Aerospike, Kafka, GRPC}
 
-\textbf{Techlead} (4 BACKEND) \hfill Oct 2019 --- May 2020 (8m.)
+\textbf{Techlead} (4 BACKEND) \hfill Oct 2019 —-- May 2020 ({\textbf{8m.}})
 \begin{itemize}
-    \setlength\itemsep{-0.4em}
-    \item Rewrote main application to achieve: stability(no fires), 3x perfomance, A/B Business testing, unit/integration tests, low
-    	    entry threshold(for newcomers).
-    	    In 2y growed from 15k to 150k rps.
-    \item Introduced Agile pipeline, involved in the recruitment process
-    \item Participated in architecture design including devop's and database storage parts.
+    \item Overhauled an application to achieve stability, \textbf{3x} performance, and A/B testing capability\@.
+    \item Increased system performance \textbf{from 15k to 150k RPS} over two years\@.
+    \item Implemented Agile, optimized hiring and staff adaptation processes\@.
+    \item Contributed to architectural design and DevOps, enhancing data storage efficiency\@.
 \end{itemize}
-\\\textbf{Stack: Node.js, Clickhouse, Postgres, Redis, Kafka}
+% - \\\textbf{Stack: Node.js, Clickhouse, Postgres, Redis, Kafka}
 
-\textbf{Senior Node.js Developer} \hfill Jul 2019 --- Oct 2019 (4m.)
+\textbf{Senior Node.js Developer} \hfill Jul 2019 --- Oct 2019 ({\textbf{4m.}})
 \begin{itemize}
-    \setlength\itemsep{-0.4em}
-    \item Develop high-load (70k rps) push advertisement sender, with a big flexibility of settings.
-    \item Microservice for authorization
+    \item Developed a high-load (\textbf{70k} rps) service for sending push notifications with extensive customization options\@.
+    \item Created a microservice for authorization\@.
 \end{itemize}
-\\\textbf{Stack: Node.js, MySQL, RabbitMQ}
+%- \\\textbf{Stack: Node.js, MySQL, RabbitMQ}
 
 \textbf{Belsona Investment Group} \hfill \textit{Moscow, Russia} \\
-\textbf{Middle Node.js Developer}  \hfill Jun 2017 --- Jul 2019 (2y.)
+\textbf{Node.js Developer}  \hfill Jun 2017 --- Jul 2019 ({\textbf{2y.}})
 
 \begin{itemize}
-    \setlength\itemsep{-0.4em}
-    \item Develop arbitrage bot between blockchain smart-contract and exchange (Binance/Bitfinex).
-    \item Design and develop risk evaluation system and a predictive model based on market trends,trading data,blockchain activities.
-    \item Automation scripts for reducing routine tasks, specifically for ICO projects
-    \item Devised service for risk score ICO products.
+    \item Engineered a bot for arbitrage between \textbf{blockchain smart contracts} and exchanges (\textbf{Binance/Bitfinex})\@.
+    \item Created a risk assessment and predictive market trend model based on blockchain data\@.
+    \item Implemented automated scripts to reduce routine tasks, particularly for ICO projects\@.
+    \item Developed a service for calculating risks of ICO products\@.
 \end{itemize}
-\\\textbf{Stack: Node.js, TypeScript, MySQL, Web3(Ethereum.), Websockets}
+% - \\\textbf{Stack: Node.js, TypeScript, MySQL, Web3(Ethereum.), Websockets}
 
 \end{rSection}
 %----------------------------------------------------------------------------------------
@@ -113,7 +104,7 @@
 
 \begin{rSection}{\textbf{Education}}
 
-\textbf{Bachelor's degree, Computer and Information Systems Security} \hfill {Sep 2013 --- May 2017 (4y.)} \\
+\textbf{Bachelor's degree, Computer and Information System Security} \hfill {Sep 2013 --- May 2017 ({\textbf{.}})} \\
 	  Dagestan State University
 
 \end{rSection}
