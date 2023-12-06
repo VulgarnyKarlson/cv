@@ -25,39 +25,41 @@
 %----------------------------------------------------------------------------------------
 
 \def \name#1{\def\@name{#1}}        % \name command can be used to set name
-\def \@name {}                      % Set \@name to empty by default
-
+\def \headline#1{\def\@headline{#1}}        % \headline command can be used to set name
 \def \addressSep {$\mid$} % Set default address separator
 
 % One, two or three address lines can be specified
 \let \@addressone \relax
-\let \@addresstwo \relax
 
 % \address command can be used to set the first, second, and third address (last 2 optional)
 \def \address #1{
-    \@ifundefined{@addresstwo}{
-        \def \@addresstwo {#1}
-    }{
-        \def \@addressone {#1}
-    }
+    \def \@addressone {#1}
 }
 
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
     \begingroup
     \def \\ {\addressSep\ }
-    \centerline{#1}
+%    \centerline
+    {#1}
     \endgroup
-    \par
     \addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
     \begingroup
-    \centerline{\namesize\textbf\@name}
+    {\namesize\textbf\@name}
     \endgroup
     \nameskip
+}
+
+\def \printheadline {
+    \begingroup
+%    \centerline
+    {\headlinesize\textbf\@headline}
+    \endgroup
+    \headlineskip
 }
 
 %----------------------------------------------------------------------------------------
@@ -66,11 +68,9 @@
 
 
 \AtBeginDocument{
-    \printname % Print the name specified with \name
-    \@ifundefined{@addressone}{}{ % Print the first address if specified
-        \printaddress{\@addressone}}
-    \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-        \printaddress{\@addresstwo}}
+    \printname
+    \hspace{3pt}\printaddress{\@addressone}\\
+    \printheadline
 }
 
 %----------------------------------------------------------------------------------------
@@ -110,7 +110,9 @@
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\LARGE} % Size of the name at the top of the document
+\def\headlinesize{\MEDIUM} % Size of the headline
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\smallskip} % The space above the horizontal line for each section
-\def\nameskip{\medskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+\def\nameskip{\smallskip} % The space after your name at the top
+\def\headlineskip{\smallskip} % The space after your name at the top
+\def\sectionskip{\smallskip} % The space after the heading section
