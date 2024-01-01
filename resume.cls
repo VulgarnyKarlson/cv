@@ -43,7 +43,6 @@
 %    \centerline
     {#1}
     \endgroup
-    \addressskip
 }
 
 % \printname is used to print the name as a page header
@@ -69,8 +68,7 @@
 
 \AtBeginDocument{
     \printname
-    \hspace{3pt}\printaddress{\@addressone}\\
-    \printheadline
+    \hspace{3pt}\printaddress{\@addressone}
 }
 
 %----------------------------------------------------------------------------------------
