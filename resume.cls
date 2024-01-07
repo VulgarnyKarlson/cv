@@ -1,16 +1,15 @@
 \ProvidesClass{resume}
-\LoadClass[10pt,letterpaper]{article} % Font size and paper type
-\nofiles                            % .aux files are not needed for resumes
+\LoadClass[10pt,letterpaper]{article}
 \pagestyle{empty}
 \RequirePackage{fontawesome}
-\RequirePackage[parfill]{parskip} % Remove paragraph indentation
-\RequirePackage{array} % Required for boldface (\bf and \bfseries) tabular columns
-\RequirePackage{ifthen} % Required for ifthenelse statements
-\RequirePackage[left=0.5in,top=0.6in,right=0.5in,bottom=0.6in]{geometry} % Document margins
+\RequirePackage[parfill]{parskip}
+\RequirePackage{array}
+\RequirePackage{ifthen}
+\RequirePackage[left=0.5in,top=0.6in,right=0.5in,bottom=0.6in]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[russian]{babel}
-
 \usepackage{hyperref}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -18,64 +17,20 @@
     urlcolor=black,
 }
 
-\pagestyle{empty} % Suppress page numbers
-
-%----------------------------------------------------------------------------------------
-%	HEADINGS COMMANDS: Commands for printing name and address
-%----------------------------------------------------------------------------------------
-
-\def \name#1{\def\@name{#1}}        % \name command can be used to set name
-\def \headline#1{\def\@headline{#1}}        % \headline command can be used to set name
-\def \addressSep {$\mid$} % Set default address separator
-
-% One, two or three address lines can be specified
+\def \name#1{\def\@name{#1}}
+\def \headline#1{\def\@headline{#1}}
+\def \addressSep {$\mid$}
 \let \@addressone \relax
-
-% \address command can be used to set the first, second, and third address (last 2 optional)
-\def \address #1{
-    \def \@addressone {#1}
-}
-
-% \printaddress is used to style an address line (given as input)
-\def \printaddress #1{
-    \begingroup
-    \def \\ {\addressSep\ }
-%    \centerline
-    {#1}
-    \endgroup
-}
-
-% \printname is used to print the name as a page header
-\def \printname {
-    \begingroup
-    {\namesize\textbf\@name}
-    \endgroup
-    \nameskip
-}
-
-\def \printheadline {
-    \begingroup
-%    \centerline
-    {\headlinesize\textbf\@headline}
-    \endgroup
-    \headlineskip
-}
-
-%----------------------------------------------------------------------------------------
-%	PRINT THE HEADING LINES
-%----------------------------------------------------------------------------------------
-
+\def \address #1{\def \@addressone {#1}}
+\def \printaddress #1{\begingroup\def \\ {\addressSep\ }{#1}\endgroup}
+\def \printname {\begingroup{\namesize\textbf\@name}\endgroup\nameskip}
+\def \printheadline {\begingroup{\headlinesize\textbf\@headline}\endgroup\headlineskip}
 
 \AtBeginDocument{
     \printname
-    \hspace{3pt}\printaddress{\@addressone}
+    \hspace{2pt}\printaddress{\@addressone}
 }
 
-%----------------------------------------------------------------------------------------
-%	SECTION FORMATTING
-%----------------------------------------------------------------------------------------
-
-% Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
     \sectionskip
     \MakeUppercase{#1} % Section title
@@ -83,34 +38,20 @@
     \hrule % Horizontal line
     \begin{list}{}{ % List for each individual item in the section
         \setlength{\leftmargin}{0em} % Margin within the section
+        \setlength{\itemindent}{0em} % Убирает отступ у элементов списка
+        \setlength{\listparindent}{0em} % Убирает отступ у абзацев внутри списка
+        \setlength{\itemsep}{-0.2em} % Устанавливает расстояние между элементами списка
+         % Устанавливает расстояние между абзацами внутри элементов списка
     }
         \item[]
         }{
     \end{list}
 }
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE FORMATTING
-%----------------------------------------------------------------------------------------
-
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-    \textbf{#1} \hfill {#2} % Bold company name and date on the right
-    \ifthenelse{\equal{#3 #4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-        \\
-        {\em #3} \hfill {\em #4} % Italic job title and location
-    }\smallskip
-    \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-        \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-        }{
-    \end{list}
-    \vspace{0em} % Some space after the list of bullet points
-}
-
-% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\LARGE} % Size of the name at the top of the document
-\def\headlinesize{\MEDIUM} % Size of the headline
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section
-\def\nameskip{\smallskip} % The space after your name at the top
-\def\headlineskip{\smallskip} % The space after your name at the top
-\def\sectionskip{\smallskip} % The space after the heading section
+\def\namesize{\LARGE}
+\def\headlinesize{\MEDIUM}
+\def\addressskip{\smallskip}
+\def\sectionlineskip{\smallskip}
+\def\nameskip{\smallskip}
+\def\headlineskip{\smallskip}
+\def\sectionskip{\smallskip}
