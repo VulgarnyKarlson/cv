@@ -1,11 +1,11 @@
 \ProvidesClass{resume}
-\LoadClass[10pt,letterpaper]{article}
+\LoadClass[12pt,letterpaper]{article}
 \pagestyle{empty}
 \RequirePackage{fontawesome}
 \RequirePackage[parfill]{parskip}
 \RequirePackage{array}
 \RequirePackage{ifthen}
-\RequirePackage[left=0.5in,top=0.6in,right=0.5in,bottom=0.6in]{geometry}
+\RequirePackage[left=0.8in,top=0.6in,right=0.8in,bottom=0.6in]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[russian]{babel}
 \usepackage{hyperref}
@@ -27,7 +27,7 @@
 \def \printheadline {\begingroup{\headlinesize\textbf\@headline}\endgroup\headlineskip}
 
 \AtBeginDocument{
-    \printname
+    \printname \\
     \hspace{2pt}\printaddress{\@addressone}
 }
 
